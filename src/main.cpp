@@ -66,6 +66,22 @@ int main(int argc, char** args)  {
 	p2->shortSign = 255; 
 	printf("Player2 member print: %d %d %d\n", p2->age, p2->score, p2->shortSign);
 
+	// Test accessing instance members with array- and pointer arithmetic:
+	// The age is the first element, so we can just brutally cast the whole
+	// p pointer to an int.
+	int* agePtr = (int*) p;
+	
+	// To move to the next member, which is the score, we first cast the p instance
+	// to an int, and then add 1. With the standard pointer arithmetic, we 
+	// move 1 int (4 bytes) and arrive at the score member. 
+	int* scorePtr = (int*)(p) + 1;
+
+	// To move to the final char, we cast to a char pointer, and then we need to 
+	// move over the two ints, which is equal to 8 bytes, to arrive at the final 
+	// member. 
+	char* signPtr = (char*) (p)+ 8;
+	printf("agePtr: %d scorePtr: %d signPtr: %d\n", *agePtr, *scorePtr, *signPtr);
+
 	
 
 	
