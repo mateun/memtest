@@ -1,0 +1,3 @@
+/Users/martingruscher/Documents/programming/c/mem_tests/build/CMakeFiles/rebuild_cache.dir
+/Users/martingruscher/Documents/programming/c/mem_tests/build/CMakeFiles/edit_cache.dir
+/Users/martingruscher/Documents/programming/c/mem_tests/build/CMakeFiles/app.dir
